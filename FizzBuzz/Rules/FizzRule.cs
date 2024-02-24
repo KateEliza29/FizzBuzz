@@ -8,7 +8,7 @@ namespace FizzBuzz.Rules
             if (number % divisor == 0)
                 return "FIZZ";
             else 
-                return number.ToString();
+                return "";
         }
     }
 }

@@ -13,15 +13,26 @@ namespace FizzBuzz
 
         public string GetParsedNumberList() 
         {
+            //TODO - Neaten the formatting and comma separate.
             var parsedNumbers = "";
             foreach (var number in _numbers)
             {
+                var matched = false;
                 foreach (var rule in _rules)
-                {   
-                    parsedNumbers += rule.GetWord(number);
+                {                       
+                    var parsedValue = rule.GetWord(number);
+                    if (!string.IsNullOrEmpty(parsedValue)) 
+                    {
+                        matched = true;
+                        parsedNumbers += parsedValue;
+                    }
+                    if (!matched)
+                        parsedNumbers += $"{number.ToString()} ";
+                    else 
+                        parsedNumbers += " ";
                 }
             }
-            return parsedNumbers;
+            return parsedNumbers.Trim();
         }
     }
 }
