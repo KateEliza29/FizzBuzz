@@ -7,6 +7,7 @@
             Console.WriteLine("Hello Health Partners!");
 
             //Generate number range. 
+            var numbers = new Utils.NumberGenerator().GetNumberList(1, 100);
 
             //Generate rules.
 

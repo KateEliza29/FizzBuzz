@@ -6,7 +6,11 @@ namespace FizzBuzz.Utils
     {
         public IEnumerable<int> GetNumberList(int startNumber, int endNumber) 
         {
-            return new List<int>();
+            //TODO - refactor to only have one return.
+            if (startNumber > 0 && endNumber > 0)
+                return Enumerable.Range(startNumber, (endNumber+1) - startNumber).ToArray();
+            else 
+                return new List<int>();
         }
     }
 }
