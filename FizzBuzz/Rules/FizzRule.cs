@@ -5,7 +5,10 @@ namespace FizzBuzz.Rules
         public int divisor { get => 3; }
         public string GetWord(int number) 
         {
-            return "FIZZ";
+            if (number % divisor == 0)
+                return "FIZZ";
+            else 
+                return number.ToString();
         }
     }
 }
