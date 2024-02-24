@@ -15,7 +15,7 @@ namespace FizzBuzzTests
 
         [TestCase(1, 10, "1, 2, FIZZ, 4, 5, FIZZ, 7, 8, FIZZ, 10")]
         [TestCase(10, 15, "10, 11, FIZZ, 13, 14, FIZZ")]
-        public void PrintParsedNumberList_Called_ReturnsExpectedString(int startNumber, int endNumber, string expectedString)
+        public void GetParsedNumberList_Called_ReturnsExpectedString(int startNumber, int endNumber, string expectedString)
         {
             var numberParser = GenerateNumberParser(startNumber, endNumber);
             var parsedList = numberParser.GetParsedNumberList();

@@ -13,7 +13,15 @@ namespace FizzBuzz
 
         public string GetParsedNumberList() 
         {
-            return "None shall pass!";
+            var parsedNumbers = "";
+            foreach (var number in _numbers)
+            {
+                foreach (var rule in _rules)
+                {   
+                    parsedNumbers += rule.GetWord(number);
+                }
+            }
+            return parsedNumbers;
         }
     }
 }
