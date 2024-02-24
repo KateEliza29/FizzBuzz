@@ -26,11 +26,11 @@ namespace FizzBuzz
                         matched = true;
                         parsedNumbers += parsedValue;
                     }
-                    if (!matched)
-                        parsedNumbers += $"{number.ToString()} ";
-                    else 
-                        parsedNumbers += " ";
                 }
+                if (!matched)
+                    parsedNumbers += $"{number.ToString()} ";
+                else 
+                    parsedNumbers += " ";
             }
             return parsedNumbers.Trim();
         }
